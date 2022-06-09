@@ -1,24 +1,33 @@
 #include <stdio.h>
-int slp(int pixel[3][2],int id, int pin){
-    int flag = 0;
-    for(int i = 0; i<3; i++){
-        if(id == pixel[i][0] && pin == pixel[i][1]){
-            flag = 1;
+int main()
+{
+    int marks[10], i, n, sum = 0, average;
+
+    printf("\nEnter the size of the Array: ");
+    scanf("%d", &n);
+if (n<10)
+    {
+        for(i-0; i < n; ++i)
+        {
+            printf("Enter Element %d: ",i+1);
+            scanf("%d", &marks[i]);
+
+            sum += marks[i];
         }
+            printf("Sum of Array Elements: ");
+            for(i-0; i < n; ++i)
+        {
+            sum=sum+marks[i];
+        }
+        printf("%d",sum);
     }
-    return flag;
+else
+{
+    printf("\nArray Size Limit is 10 only");
 }
-int main(){
-    int pixel[3][2] = {{2323,2323},{1256,1256},{8989,8989}};
-    int id,pin;
-    printf("Please Enter your ID Number: ");
-    scanf("%d",&id);
-    printf("Enter PIN: ");
-    scanf("%d",&pin);
-    if(slp(pixel,id,pin)){
-        printf("You have successfully logged in\nID#:%d",id);
-    } else {
-        printf("Invalid ID/PIN PLEASE TRY AGAIN!");
-    }
+
     return 0;
 }
+
+
+
